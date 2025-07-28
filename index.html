@@ -427,10 +427,7 @@
 <section class="carousel-section">
   <h2>📊 Meus Gráficos</h2>
   <div class="carousel-wrapper">
-    <div class="carousel-text left">
-      <p>Esses gráficos ilustram a análise de expressão diferencial realizada com RNA-seq. Cada gráfico representa uma etapa específica do pipeline analítico.</p>
-    </div>
-
+    <!-- Carrossel à esquerda -->
     <div class="carousel-container">
       <button class="carousel-btn prev" aria-label="Imagem anterior">&#10094;</button>
       <div class="carousel-slide">
@@ -442,11 +439,14 @@
       <button class="carousel-btn next" aria-label="Próxima imagem">&#10095;</button>
     </div>
 
-    <div class="carousel-text right">
-      <p>Cada visualização foi gerada com ferramentas como DESeq2, Seurat e Scanpy, permitindo insights robustos sobre padrões de expressão gênica e agrupamentos celulares.</p>
+    <!-- Texto que será alterado dinamicamente -->
+    <div class="carousel-text right" id="carousel-text">
+      <h3>Sobre os Gráficos</h3>
+      <p>Esse gráfico mostra uma análise de expressão diferencial entre grupos experimentais.</p>
     </div>
   </div>
 </section>
+
 
 <style>
 .carousel-section {
@@ -540,11 +540,36 @@
   const images = slide.querySelectorAll('img');
   const prevBtn = document.querySelector('.carousel-btn.prev');
   const nextBtn = document.querySelector('.carousel-btn.next');
+  const textContainer = document.getElementById('carousel-text');
+
+  const texts = [
+    {
+      title: "Expressão Diferencial",
+      desc: "Esse gráfico mostra uma análise de expressão diferencial entre grupos experimentais usando DESeq2."
+    },
+    {
+      title: "Comparação entre Grupos",
+      desc: "Visualização dos genes com maior variação entre dois grupos usando boxplots e análises estatísticas."
+    },
+    {
+      title: "Heatmap e Clustering",
+      desc: "Gráfico de calor (heatmap) com clustering hierárquico para identificar padrões de expressão."
+    },
+    {
+      title: "Análise ScRNA-seq",
+      desc: "Visualização de dados de RNA de célula única (ScRNA-seq) com UMAP e agrupamento celular usando Seurat."
+    }
+  ];
 
   let counter = 0;
 
   function updateCarousel() {
     slide.style.transform = `translateX(-${counter * 400}px)`;
+    const { title, desc } = texts[counter];
+    textContainer.innerHTML = `
+      <h3>${title}</h3>
+      <p>${desc}</p>
+    `;
   }
 
   prevBtn.addEventListener('click', () => {
@@ -559,6 +584,7 @@
 
   updateCarousel();
 </script>
+
 
   
 <section class="contact" aria-label="Contatos">
