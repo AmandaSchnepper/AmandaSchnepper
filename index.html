@@ -424,6 +424,136 @@
   </div>
 </section>
 
+<section class="carousel-section">
+  <h2>📊 Meus Gráficos</h2>
+  <div class="carousel-container">
+    <button class="carousel-btn prev" aria-label="Imagem anterior">&#10094;</button>
+    <div class="carousel-slide">
+      <img src="https://github.com/AmandaSchnepper/AmandaSchnepper.github.io/blob/main/1.png" alt="Differential expression analysis" />
+      <img src="https://github.com/AmandaSchnepper/AmandaSchnepper.github.io/blob/main/2.png" alt="Group comparison" />
+      <img src="https://github.com/AmandaSchnepper/AmandaSchnepper.github.io/blob/main/3.png" alt="Heatmap and clustering" />
+      <img src="https://github.com/AmandaSchnepper/AmandaSchnepper.github.io/blob/main/4.png" alt="ScRNA-seq analysis" />
+    </div>
+    <button class="carousel-btn next" aria-label="Próxima imagem">&#10095;</button>
+  </div>
+</section>
+<style>
+  .carousel-section {
+    max-width: 900px;
+    margin: 60px auto;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  .carousel-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: white;
+  }
+  .carousel-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 4px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(
+      45deg,
+      #f0f921,
+      #f89540,
+      #cc4778,
+      #7e03a8,
+      #0d0887
+    );
+    background-color: #000;
+  }
+  .carousel-slide {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+  .carousel-slide img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    user-select: none;
+    pointer-events: none;
+  }
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(240, 249, 33, 0.8);
+    border: none;
+    color: black;
+    font-size: 2.5rem;
+    padding: 8px 14px;
+    cursor: pointer;
+    border-radius: 50%;
+    user-select: none;
+    transition: background-color 0.3s;
+    z-index: 10;
+  }
+  .carousel-btn:hover {
+    background-color: #f89540;
+    color: white;
+  }
+  .carousel-btn.prev {
+    left: 12px;
+  }
+  .carousel-btn.next {
+    right: 12px;
+  }
+  @media (max-width: 600px) {
+    .carousel-btn {
+      font-size: 2rem;
+      padding: 6px 10px;
+    }
+    .carousel-slide img {
+      max-height: 250px;
+    }
+  }
+</style>
+
+<script>
+  const slideContainer = document.querySelector('.carousel-slide');
+  const slides = document.querySelectorAll('.carousel-slide img');
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+
+  let currentIndex = 0;
+  const totalSlides = slides.length;
+
+  function updateSlide() {
+    slideContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  function showNext() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateSlide();
+  }
+
+  function showPrev() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateSlide();
+  }
+
+  nextBtn.addEventListener('click', () => {
+    showNext();
+    resetInterval();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    showPrev();
+    resetInterval();
+  });
+
+  let autoSlide = setInterval(showNext, 5000);
+
+  function resetInterval() {
+    clearInterval(autoSlide);
+    autoSlide = setInterval(showNext, 5000);
+  }
+</script>
+  
 <section class="contact" aria-label="Contatos">
   <h2>Contact me</h2>
   <div class="contact-links">
