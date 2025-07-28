@@ -5,115 +5,108 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Amanda Schnepper - Perfil</title>
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #1a1a1a;
-      color: #f0f0f0;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-    }
-    header {
-      text-align: center;
-      background: linear-gradient(90deg, #440154, #31688e, #35b779, #fde725);
-      padding: 40px 20px;
-      color: white;
-    }
-    header img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      max-height: 200px;
-      object-fit: cover;
-      margin-bottom: 20px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.5);
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.8rem;
-      font-weight: 700;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
-    }
-    section.expertise {
-      max-width: 900px;
-      margin: 40px auto;
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+  /* Expertises */
+  section.expertise {
+    max-width: 900px;
+    margin: 40px auto;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card {
+    background: #222;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    padding: 20px;
+    width: 280px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, border-color 0.3s ease;
+  }
+  .card:hover {
+    transform: scale(1.05);
+  }
+  .card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    text-align: center;
+    text-shadow: 1px 1px 3px #000;
+  }
+  .card p {
+    flex-grow: 1;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  .tags {
+    text-align: center;
+  }
+  .tags img {
+    margin: 3px 5px;
+    vertical-align: middle;
+  }
+
+  /* Cores da paleta plasma para as molduras */
+  .card:nth-child(1) {
+    border-color: #440154; /* roxo escuro */
+  }
+  .card:nth-child(2) {
+    border-color: #31688e; /* azul */
+  }
+  .card:nth-child(3) {
+    border-color: #35b779; /* verde */
+  }
+  .card:nth-child(4) {
+    border-color: #fde725; /* amarelo */
+  }
+
+  /* Contato */
+  section.contact {
+    max-width: 700px;
+    margin: 50px auto;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .contact-links a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  .contact-links img {
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+  }
+  .contact-links a:hover img {
+    filter: drop-shadow(0 0 5px #fde725);
+  }
+
+  @media(max-width: 600px) {
     .card {
-      background: #222;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.7);
-      padding: 20px;
-      width: 280px;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform 0.2s ease;
+      width: 90%;
     }
-    .card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 25px #fde725;
+    .contact-links {
+      gap: 20px;
     }
-    .card h3 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      font-size: 1.4rem;
-      color: #fde725;
-      text-align: center;
-      text-shadow: 1px 1px 3px #000;
-    }
-    .card p {
-      flex-grow: 1;
-      font-size: 0.95rem;
-      margin-bottom: 15px;
-      text-align: center;
-    }
-    .tags {
-      text-align: center;
-    }
-    .tags img {
-      margin: 3px 5px;
-      vertical-align: middle;
-    }
-    section.contact {
-      max-width: 700px;
-      margin: 50px auto;
-      text-align: center;
-      font-size: 1.1rem;
-    }
-    section.contact a {
-      text-decoration: none;
-      margin: 0 10px;
-      display: inline-block;
-    }
-    section.contact img {
-      vertical-align: middle;
-      width: 30px;
-      height: 30px;
-      filter: drop-shadow(0 0 1px rgba(0,0,0,0.8));
-      transition: filter 0.2s ease;
-    }
-    section.contact a:hover img {
-      filter: drop-shadow(0 0 5px #fde725);
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #888;
+    .contact-links a {
       font-size: 0.9rem;
-      border-top: 1px solid #444;
-      margin-top: 60px;
     }
-    @media(max-width: 940px) {
-      .card {
-        width: 90%;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
 
@@ -161,27 +154,28 @@
   </div>
 </section>
 
-<section class="contact" aria-label="Contatos" style="max-width: 700px; margin: 50px auto; text-align: center; font-size: 1.1rem;">
-  <h2>🌐 Contact me</h2>
-  <div style="display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; margin-top: 20px;">
-    <a href="https://www.linkedin.com/in/amandapivetaschnepper/" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 8px; text-decoration: none; color: #0077B5; font-weight: 600;">
-      <img src="https://img.shields.io/badge/-LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" style="width: 30px; height: 30px;" />
-      <span>linkedin.com/in/amandapivetaschnepper/</span>
+<section class="contact" aria-label="Contatos">
+  <h2>🌐 Onde me encontrar</h2>
+  <div class="contact-links">
+    <a href="https://www.linkedin.com/in/amandapivetaschnepper/" target="_blank" rel="noopener noreferrer" style="color: #0077B5;">
+      <img src="https://img.shields.io/badge/-LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" />
+      linkedin.com/in/amandapivetaschnepper/
     </a>
-    <a href="https://orcid.org/my-orcid?orcid=0000-0002-5731-9085" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 8px; text-decoration: none; color: #4abc1f; font-weight: 600;">
-      <img src="https://img.shields.io/badge/-ORCID-4abc1f?style=flat&logo=orcid&logoColor=white" alt="ORCID" style="width: 30px; height: 30px;" />
-      <span>orcid.org/0000-0002-5731-9085</span>
+    <a href="https://orcid.org/my-orcid?orcid=0000-0002-5731-9085" target="_blank" rel="noopener noreferrer" style="color: #4abc1f;">
+      <img src="https://img.shields.io/badge/-ORCID-4abc1f?style=flat&logo=orcid&logoColor=white" alt="ORCID" />
+      orcid.org/0000-0002-5731-9085
     </a>
-    <a href="https://scholar.google.com/citations?user=fusYGycAAAAJ&hl=pt-BR" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 8px; text-decoration: none; color: #4285F4; font-weight: 600;">
-      <img src="https://img.shields.io/badge/-Google_Scholar-4285F4?style=flat&logo=google-scholar&logoColor=white" alt="Google Scholar" style="width: 30px; height: 30px;" />
-      <span>scholar.google.com/citations?id=fusYGycAAAAJ</span>
+    <a href="https://scholar.google.com/citations?user=fusYGycAAAAJ&hl=pt-BR" target="_blank" rel="noopener noreferrer" style="color: #4285F4;">
+      <img src="https://img.shields.io/badge/-Google_Scholar-4285F4?style=flat&logo=google-scholar&logoColor=white" alt="Google Scholar" />
+      scholar.google.com/citations?id=fusYGycAAAAJ
     </a>
-    <a href="mailto:amanda.schnepper@unesp.br" style="display: flex; align-items: center; gap: 8px; text-decoration: none; color: #D14836; font-weight: 600;">
-      <img src="https://img.shields.io/badge/-Email-D14836?style=flat&logo=gmail&logoColor=white" alt="Email" style="width: 30px; height: 30px;" />
-      <span>amanda.schnepper@unesp.br</span>
+    <a href="mailto:amanda.schnepper@unesp.br" style="color: #D14836;">
+      <img src="https://img.shields.io/badge/-Email-D14836?style=flat&logo=gmail&logoColor=white" alt="Email" />
+      amanda.schnepper@unesp.br
     </a>
   </div>
 </section>
+
 
 <footer>
   © 2025 Amanda Schnepper — Todos os direitos reservados.
