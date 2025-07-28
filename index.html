@@ -12,6 +12,50 @@
     font-family: Arial, sans-serif;
   }
 
+      .skills {
+    max-width: 800px;
+    margin: 60px auto;
+    text-align: center;
+  }
+  .skills h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #fde725;
+    text-shadow: 1px 1px 5px #222;
+  }
+  .skill-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  .skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    border-image: linear-gradient(45deg, #440154, #31688e, #35b779, #fde725);
+    border-image-slice: 1;
+    background-color: #111;
+    transition: transform 0.2s ease;
+  }
+  .skill:hover {
+    transform: scale(1.05);
+  }
+  .skill img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 3px #fde725);
+  }
+  .skill span {
+    font-weight: 600;
+    color: white;
+  }
+
   /* Expertises */
   section.expertise {
     max-width: 900px;
@@ -126,6 +170,28 @@
     Pesquisadora em bioinformática, especializada em RNA-seq, scRNA-seq e comunicação Ligante-Receptor. Apaixonada por desvendar os mistérios da biologia molecular usando programação e análise de dados.
   </p>
 </header>
+
+<section class="skills" aria-label="Linguagens de programação">
+  <h2>💻 Linguagens que eu domino</h2>
+  <div class="skill-grid">
+    <div class="skill">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt="R" />
+      <span>R</span>
+    </div>
+    <div class="skill">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash" />
+      <span>Shell / Bash</span>
+    </div>
+    <div class="skill">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+      <span>Python</span>
+    </div>
+    <div class="skill">
+      <img src="https://raw.githubusercontent.com/nf-core/logos/master/nf-core/nf-core-logo.svg" alt="nf-core" />
+      <span>nf-core</span>
+    </div>
+  </div>
+</section>
 
 <section class="expertise" aria-label="Expertise">
   <div class="card">
