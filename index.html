@@ -12,6 +12,7 @@
     font-family: Arial, sans-serif;
   }
 
+    /* Programming languages */
    .skills-languages {
     text-align: center;
     margin: 60px auto;
@@ -47,6 +48,55 @@
     margin: 0;
     font-weight: bold;
     font-size: 1rem;
+  }
+    
+/* Research Projects */
+    .projects {
+  max-width: 900px;
+  margin: 80px auto;
+  text-align: left;
+  color: white;
+}
+
+  .projects h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #f0f921;
+  }
+  
+  .project-card {
+    background-color: #111;
+    border-left: 5px solid #cc4778;
+    border-radius: 8px;
+    padding: 20px 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
+  }
+  
+  .project-card h3 {
+    margin-top: 0;
+    color: #f89540;
+  }
+  
+  .project-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .project-card .tags {
+    margin-top: 10px;
+  }
+  
+  .project-card .tags span {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    margin-right: 8px;
+    margin-top: 6px;
   }
 
   /* Expertises */
@@ -165,7 +215,7 @@
 </header>
 
 <section class="skills-languages">
-  <h2>💻 Languages</h2>
+  <h2>Programing languages</h2>
   <div class="skills-container">
     <div class="skill-item">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt="R">
@@ -180,38 +230,77 @@
       <p>Python</p>
     </div>
     <div class="skill-item">
-      <img src="https://raw.githubusercontent.com/nf-core/logos/master/nf-core/nf-core-logo.svg" alt="nf-core">
-      <p>nf-core</p>
+      <img src="https://raw.githubusercontent.com/nextflow-io/nextflow/master/docs/images/nextflow-logo.png" alt="Nextflow">
+      <p>Nextflow</p>
     </div>
   </div>
 </section>
 
+<section class="projects">
+  <h2>🔬 Research Projects</h2>
 
-<section class="expertise" aria-label="Expertise">
-  <div class="card">
-    <h3>RNA-seq Analysis</h3>
-    <p>Análise de dados de RNA-seq para identificação de padrões e variações genéticas.</p>
+  <div class="project-card">
+    <h3>Long Non-Coding RNAs (lncRNAs)</h3>
+    <p>I investigate the role and regulation of long non-coding RNAs in transcriptomic datasets. This includes identification and classification of lncRNAs, expression profiling, and functional prediction using bioinformatics pipelines.</p>
     <div class="tags">
-      <img src="https://img.shields.io/badge/R-276DC3?style=flat&logo=r&logoColor=white" alt="R"/>
-      <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" alt="Python"/>
-      <img src="https://img.shields.io/badge/DESeq2-Orange?style=flat" alt="DESeq2"/>
+      <span>lncRNA</span>
+      <span>FEELnc</span>
+      <span>CPAT</span>
+      <span>Gencode</span>
+      <span>Bioconductor</span>
     </div>
   </div>
-  <div class="card">
-    <h3>scRNA-seq</h3>
-    <p>Estudo de expressão gênica em células individuais com foco em heterogeneidade.</p>
-    <div class="tags">
-      <img src="https://img.shields.io/badge/Seurat-FF6F61?style=flat" alt="Seurat"/>
-      <img src="https://img.shields.io/badge/Scanpy-14A2FF?style=flat" alt="Scanpy"/>
+
+  <!-- Você pode adicionar mais project-card abaixo no mesmo estilo -->
+</section>
+
+
+<section class="expertise">
+  <h2>🧠 Expertise</h2>
+  <div class="expertise-cards">
+
+    <div class="card">
+      <h3>RNA-seq</h3>
+      <p>Preprocessing and alignment of RNA-seq data from raw FASTQ to quantification.</p>
+      <div class="tags">
+        <span>FASTQ</span>
+        <span>nf-core</span>
+        <span>STAR</span>
+        <span>Salmon</span>
+      </div>
     </div>
-  </div>
-  <div class="card">
-    <h3>Ligand-Receptor Communication</h3>
-    <p>Investigação de interações celulares através de sinais de ligantes e receptores.</p>
-    <div class="tags">
-      <img src="https://img.shields.io/badge/CellPhoneDB-00BCD4?style=flat" alt="CellPhoneDB"/>
-      <img src="https://img.shields.io/badge/NicheNet-4CAF50?style=flat" alt="NicheNet"/>
+    
+    <div class="card">
+      <h3>Gene Expression</h3>
+      <p>Analysis of bulk and single-cell gene expression data using statistical and computational pipelines.</p>
+      <div class="tags">
+        <span>Seurat</span>
+        <span>DESeq2</span>
+        <span>Scanpy</span>
+        <span>EdgeR</span>
+      </div>
     </div>
+
+    <div class="card">
+      <h3>scRNA-seq</h3>
+      <p>Processing and integration of single-cell RNA sequencing data for transcriptomic profiling.</p>
+      <div class="tags">
+        <span>Seurat</span>
+        <span>Scanpy</span>
+        <span>Cell Ranger</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Ligand-Receptor Communication</h3>
+      <p>Inference of intercellular communication networks using single-cell transcriptomic data.</p>
+      <div class="tags">
+        <span>CellChat</span>
+        <span>NATMI</span>
+        <span>LIANA</span>
+      </div>
+    </div>
+
   </div>
 </section>
 
