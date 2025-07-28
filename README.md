@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://link-do-seu-banner" alt="Bem-vindo ao meu GitHub!">
+  <img src="[https://link-do-seu-banner](https://github.com/AmandaSchnepper/AmandaSchnepper/blob/main/banner_github.png)" alt="Bem-vindo ao meu GitHub!">
 </p>
 
 <h1 align="center">Olá! Eu sou [Seu Nome] 👋</h1>
