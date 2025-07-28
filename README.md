@@ -21,15 +21,11 @@
 
 ## 💻 Tecnologias & Ferramentas
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <img src="https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=000" />
-  <img src="https://img.shields.io/badge/-TypeScript-3178C6?style=flat&logo=typescript&logoColor=white" />
-  <img src="https://img.shields.io/badge/-React-61DAFB?style=flat&logo=react&logoColor=000" />
-  <img src="https://img.shields.io/badge/-Node.js-339933?style=flat&logo=node.js&logoColor=white" />
-  <img src="https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/-PostgreSQL-336791?style=flat&logo=postgresql&logoColor=white" />
-  <img src="https://img.shields.io/badge/-Docker-2496ED?style=flat&logo=docker&logoColor=white" />
-</div>
+![R](https://img.shields.io/badge/R-276DC3?style=flat&logo=r&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat&logo=gnubash&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![nf-core](https://img.shields.io/badge/nf--core-009688?style=flat)
+
 
 ---
 
@@ -44,9 +40,11 @@
 
 ## 🌐 Onde me encontrar
 
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/seu-usuario)
-[![Portfólio](https://img.shields.io/badge/-Portfólio-000?style=flat&logo=vercel&logoColor=white)](https://seuportfolio.com)
-[![Email](https://img.shields.io/badge/-Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:seu@email.com)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/amandapivetaschnepper/)
+[![ORCID](https://img.shields.io/badge/-ORCID-A6CE39?style=flat&logo=orcid&logoColor=white)](https://orcid.org/0000-0002-5731-9085)
+[![Google Scholar](https://img.shields.io/badge/-Google%20Scholar-4285F4?style=flat&logo=googlescholar&logoColor=white)](https://scholar.google.com/citations?user=fusYGycAAAAJ&hl=pt-BR)
+[![Email](https://img.shields.io/badge/-Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:amanda.schnepper@unesp.br)
+
 
 ---
 
