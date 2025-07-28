@@ -482,12 +482,11 @@
 .carousel-wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 5px;
-  flex-wrap: wrap;
+  justify-content: flex-start; /* tira o espaço entre */
+  gap: 0;
 }
-
 .carousel-text {
+  margin-left: 5px; /* ou 0 para colar */
   width: 250px;
   font-size: 0.95rem;
   text-align: justify;
