@@ -214,11 +214,28 @@
     font-family: Arial, sans-serif;
   }
   .tags {
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+    justify-content: center;
   }
+  
   .tags span {
+    background-color: #ffffff20; /* cor clara com transparência */
     color: white;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid #ffffff30;
+    white-space: nowrap;
+    transition: background 0.3s ease;
   }
+  
+  .tags span:hover {
+    background-color: #ffffff40;
+  }
+  
   .tags img {
     margin: 3px 5px;
     vertical-align: middle;
@@ -466,7 +483,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 5px;
   flex-wrap: wrap;
 }
 
