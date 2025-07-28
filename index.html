@@ -12,38 +12,42 @@
     font-family: Arial, sans-serif;
   }
 
-   .skill {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 120px;
-  padding: 20px;
-  border-radius: 16px;
-  background-color: #111; /* fundo escuro */
-  box-shadow: 0 0 10px #f89540;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
-}
-.skill:hover {
-  transform: scale(1.07);
-  box-shadow: 0 0 15px #f0f921; /* amarelo neon */
-}
-.skill-icon {
-  background-color: rgba(255, 255, 255, 0.08); /* leve círculo atrás */
-  border-radius: 50%;
-  padding: 12px;
-  margin-bottom: 10px;
-  box-shadow: 0 0 8px #cc4778; /* rosa plasma */
-}
-.skill-icon img {
-  width: 50px;
-  height: 50px;
-  filter: drop-shadow(0 0 3px #0d0887); /* azul escuro glow */
-}
-.skill span {
-  font-weight: 600;
-  color: white;
-  margin-top: 5px;
-}
+   .skills-languages {
+    text-align: center;
+    margin: 60px auto;
+    color: white;
+  }
+  .skills-languages h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  .skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .skill-item {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 12px;
+    width: 140px;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
+    transition: transform 0.2s ease;
+  }
+  .skill-item:hover {
+    transform: scale(1.05);
+  }
+  .skill-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  .skill-item p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1rem;
+  }
 
   /* Expertises */
   section.expertise {
@@ -160,27 +164,28 @@
   </p>
 </header>
 
-<section class="skills" aria-label="Linguagens de programação">
-  <h2>💻 Linguagens que eu domino</h2>
-  <div class="skill-grid">
-    <div class="skill">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt="R" />
-      <span>R</span>
+<section class="skills-languages">
+  <h2>💻 Languages</h2>
+  <div class="skills-container">
+    <div class="skill-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt="R">
+      <p>R</p>
     </div>
-    <div class="skill">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash" />
-      <span>Shell / Bash</span>
+    <div class="skill-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Shell / Bash">
+      <p>Shell / Bash</p>
     </div>
-    <div class="skill">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
-      <span>Python</span>
+    <div class="skill-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+      <p>Python</p>
     </div>
-    <div class="skill">
-      <img src="https://raw.githubusercontent.com/nf-core/logos/master/nf-core/nf-core-logo.svg" alt="nf-core" />
-      <span>nf-core</span>
+    <div class="skill-item">
+      <img src="https://raw.githubusercontent.com/nf-core/logos/master/nf-core/nf-core-logo.svg" alt="nf-core">
+      <p>nf-core</p>
     </div>
   </div>
 </section>
+
 
 <section class="expertise" aria-label="Expertise">
   <div class="card">
