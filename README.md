@@ -1,21 +1,12 @@
-<p align="center">
-  <img src="[https://link-do-seu-banner](https://github.com/AmandaSchnepper/AmandaSchnepper/blob/main/banner_github.png)" alt="Bem-vindo ao meu GitHub!">
-</p>
-
-<h1 align="center">Olá! Eu sou [Seu Nome] 👋</h1>
+<h1 align="center">Olá! Eu sou Amanda Schnepper 👋</h1>
 
 <p align="center">
-  Desenvolvedor Full Stack | Apaixonado por tecnologia e inovação
+ PhD in Genetics
 </p>
 
 ---
 
-## 🧠 Sobre mim
-
-🎓 Graduado em [Seu Curso]  
-💼 Atualmente trabalhando com [tecnologias ou empresa]  
-🚀 Sempre aprendendo novas ferramentas e frameworks  
-🎯 Foco em desenvolvimento de aplicações escaláveis
+## 🧠 About me
 
 ---
 
@@ -26,16 +17,6 @@
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![nf-core](https://img.shields.io/badge/nf--core-009688?style=flat)
 
-
----
-
-## 📈 GitHub Stats
-
-<p align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=seu-usuario&show_icons=true&theme=tokyonight" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=seu-usuario&layout=compact&theme=tokyonight" />
-</p>
-
 ---
 
 ## 🌐 Onde me encontrar
@@ -45,19 +26,14 @@
 [![Google Scholar](https://img.shields.io/badge/-Google%20Scholar-4285F4?style=flat&logo=googlescholar&logoColor=white)](https://scholar.google.com/citations?user=fusYGycAAAAJ&hl=pt-BR)
 [![Email](https://img.shields.io/badge/-Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:amanda.schnepper@unesp.br)
 
+---
+
+## 🔬 Expertise
+
+| RNA-seq Analysis | scRNA-seq | Ligand-Receptor Communication |
+|------------------|-----------|-------------------------------|
+| Análise de dados de RNA-seq para identificação de padrões e variações genéticas. | Estudo de expressão gênica em células individuais com foco em heterogeneidade. | Investigação de interações celulares através de sinais de ligantes e receptores. |
+| ![R](https://img.shields.io/badge/R-276DC3?style=flat&logo=r&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) ![DESeq2](https://img.shields.io/badge/DESeq2-Orange?style=flat) | ![Seurat](https://img.shields.io/badge/Seurat-FF6F61?style=flat) ![Scanpy](https://img.shields.io/badge/Scanpy-14A2FF?style=flat) | ![CellPhoneDB](https://img.shields.io/badge/CellPhoneDB-00BCD4?style=flat) ![NicheNet](https://img.shields.io/badge/NicheNet-4CAF50?style=flat) |
 
 ---
 
-**AmandaSchnepper/AmandaSchnepper** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
