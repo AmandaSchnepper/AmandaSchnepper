@@ -42,32 +42,34 @@
   }
   
   .timeline-item {
-    display: flex;
-    gap: 12px;
-    padding: 8px 0;
-    border-left: 3px solid #bc3754; /* linha da timeline */
-    position: relative;
-  }
-  
-  .timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -10px;
-    top: 12px;
-    width: 12px;
-    height: 12px;
-    background-color: #f98e09;
-    border-radius: 50%;
-  }
-  
-  .timeline-date {
-    flex-shrink: 0;
-    width: 100px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    color: #f7f7f7;
-    padding-top: 4px;
-  }
+  display: flex;
+  gap: 20px; /* aumenta o espaço entre a linha e o conteúdo */
+  padding: 12px 0;
+  position: relative;
+  padding-left: 30px; /* espaço para a linha (pseudo-elemento) */
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, #FF9B54, #FF7F51, #CE4257, #720026, #4F000B); /* degradê com vírgulas corrigido */
+  border-radius: 2px;
+}
+
+.timeline-date {
+  flex-shrink: 0;
+  width: 120px;         /* mais largura para afastar bem da linha */
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #f7f7f7;
+  padding-top: 4px;
+  padding-left: 10px;   /* afasta da linha vertical */
+}
+
   
   .timeline-content {
     font-size: 0.85rem;
@@ -141,14 +143,27 @@
     color: white;
   }
   
-  .project-card {
+ .project-card {
+    position: relative;
     background-color: #111;
-    border-left: 5px solid #f98e09;
     border-radius: 8px;
-    padding: 20px 25px;
+    padding: 20px 25px 20px 30px; /* espaço extra à esquerda pro gradiente */
     margin-bottom: 30px;
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
     color: white;
+    overflow: hidden; /* esconde o pseudo-elemento fora do card */
+  }
+  
+  .project-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background: linear-gradient(to bottom, #FF9B54, #FF7F51, #CE4257, #720026, #4F000B); /* gradiente vertical */
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
   }
   
   .project-card h3 {
@@ -210,11 +225,11 @@
     border-width: 4px;
     border-image-source: linear-gradient(
       45deg,
-      #fcffa4,
-      #f98e09,
-      #bc3754,
-      #57106e,
-      #000004
+      #FF9B54,
+      #FF7F51,
+      #CE4257,
+      #720026,
+      #4F000B
     );
   }
   .card h3 {
@@ -262,41 +277,48 @@
     vertical-align: middle;
   }
 
-  /* Contato */
+ /* Contato */
   section.contact {
     max-width: 700px;
     margin: 50px auto;
     text-align: center;
-    font-size: 1.1rem;
     color: white;
     font-family: Arial, sans-serif;
   }
+  
   section.contact > h2 {
     color: white;
     font-size: 2rem;
     margin-bottom: 20px;
   }
+  
   .contact-links {
     display: flex;
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
   }
+  
   .contact-links a {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 12px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    color: inherit;
-    font-family: Arial, sans-serif;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #222;
+    border-radius: 12px;
+    transition: transform 0.2s ease;
   }
+  
+  .contact-links a:hover {
+    transform: scale(1.1);
+  }
+  
   .contact-links img {
     width: 35px;
     height: 35px;
-    flex-shrink: 0;
   }
+  
   .contact-links a:hover img {
     filter: drop-shadow(0 0 5px #fde725);
   }
@@ -634,23 +656,19 @@
 
   
 <section class="contact" aria-label="Contatos">
-  <h2>Contact me</h2>
+  <h2>Found me</h2>
   <div class="contact-links">
-    <a href="https://www.linkedin.com/in/amandapivetaschnepper/" target="_blank" rel="noopener noreferrer" style="color: #0077B5;">
-      <img src="https://img.shields.io/badge/-LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" />
-      linkedin.com/in/amandapivetaschnepper/
+    <a href="https://www.linkedin.com/in/amandapivetaschnepper/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+      <img src="https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
     </a>
-    <a href="https://orcid.org/my-orcid?orcid=0000-0002-5731-9085" target="_blank" rel="noopener noreferrer" style="color: #4abc1f;">
-      <img src="https://img.shields.io/badge/-ORCID-4abc1f?style=flat&logo=orcid&logoColor=white" alt="ORCID" />
-      orcid.org/0000-0002-5731-9085
+    <a href="https://orcid.org/0000-0002-5731-9085" target="_blank" rel="noopener noreferrer" aria-label="ORCID">
+      <img src="https://img.shields.io/badge/-ORCID-4abc1f?style=for-the-badge&logo=orcid&logoColor=white" alt="ORCID" />
     </a>
-    <a href="https://scholar.google.com/citations?user=fusYGycAAAAJ&hl=pt-BR" target="_blank" rel="noopener noreferrer" style="color: #4285F4;">
-      <img src="https://img.shields.io/badge/-Google_Scholar-4285F4?style=flat&logo=google-scholar&logoColor=white" alt="Google Scholar" />
-      scholar.google.com/citations?id=fusYGycAAAAJ
+    <a href="https://scholar.google.com/citations?user=fusYGycAAAAJ&hl=pt-BR" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+      <img src="https://img.shields.io/badge/-Scholar-4285F4?style=for-the-badge&logo=google-scholar&logoColor=white" alt="Google Scholar" />
     </a>
-    <a href="mailto:amanda.schnepper@unesp.br" style="color: #D14836;">
-      <img src="https://img.shields.io/badge/-Email-D14836?style=flat&logo=gmail&logoColor=white" alt="Email" />
-      amanda.schnepper@unesp.br
+    <a href="mailto:amanda.schnepper@unesp.br" aria-label="E-mail">
+      <img src="https://img.shields.io/badge/-E-mail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="E-mail" />
     </a>
   </div>
 </section>
