@@ -307,12 +307,15 @@
   }
   
   .contact-links img {
-    width: 35px;
-    height: 35px;
+    width: 70%;        /* em vez de tamanho fixo, usa % da caixa */
+    height: auto;      /* mantém a proporção da imagem */
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
   }
   
   .contact-links a:hover img {
-    filter: drop-shadow(0 0 5px #fde725);
+    filter: drop-shadow(0 0 5px #4F000B);
   }
 
   footer {
@@ -664,10 +667,6 @@
     </a>
   </div>
 </section>
-
-<footer>
-  © 2025 Amanda Schnepper — Todos os direitos reservados.
-</footer>
 
 </body>
 </html>
