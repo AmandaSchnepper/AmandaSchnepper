@@ -32,7 +32,7 @@
   .timeline h2 {
     font-size: 1.8rem;
     margin-bottom: 20px;
-    color: #f0f921;
+    color: #f7f7f7;
   }
   
   .timeline-container {
@@ -45,7 +45,7 @@
     display: flex;
     gap: 12px;
     padding: 8px 0;
-    border-left: 3px solid #f0f921; /* linha da timeline */
+    border-left: 3px solid #bc3754; /* linha da timeline */
     position: relative;
   }
   
@@ -56,7 +56,7 @@
     top: 12px;
     width: 12px;
     height: 12px;
-    background-color: #f0f921;
+    background-color: #f98e09;
     border-radius: 50%;
   }
   
@@ -65,7 +65,7 @@
     width: 100px;
     font-size: 0.8rem;
     font-weight: bold;
-    color: #f0f921;
+    color: #f7f7f7;
     padding-top: 4px;
   }
   
@@ -143,7 +143,7 @@
   
   .project-card {
     background-color: #111;
-    border-left: 5px solid #cc4778;
+    border-left: 5px solid #f98e09;
     border-radius: 8px;
     padding: 20px 25px;
     margin-bottom: 30px;
@@ -210,11 +210,11 @@
     border-width: 4px;
     border-image-source: linear-gradient(
       45deg,
-      #f0f921,
-      #f89540,
-      #cc4778,
-      #7e03a8,
-      #0d0887
+      #fcffa4,
+      #f98e09,
+      #bc3754,
+      #57106e,
+      #000004
     );
   }
   .card h3 {
@@ -398,19 +398,29 @@
   <h2>🔬 Research Projects</h2>
 
   <div class="project-card">
-    <h3>Long Non-Coding RNAs (lncRNAs)</h3>
-    <p>I investigate the role and regulation of long non-coding RNAs in transcriptomic datasets. This includes identification and classification of lncRNAs, expression profiling, and functional prediction using bioinformatics pipelines.</p>
+    <h3>Exploring lncRNAs in cancer-associated cachexia)</h3>
+    <p>I investigate the role and regulation of long non-coding RNAs in transcriptomic datasets. This includes identification and classification of lncRNAs, expression profiling, and functional prediction using bioinformatics pipelines in public data.</p>
     <div class="tags">
-      <span>lncRNA</span>
-      <span>FEELnc</span>
-      <span>CPAT</span>
       <span>Gencode</span>
-      <span>Bioconductor</span>
+      <span>GEOdatasets</span>
+      <span>nf-core</span>
+      <span>DESeq2</span>
+      <span>CIBERSORTx</span>
     </div>
   </div>
 
-  <!-- Você pode adicionar mais project-card abaixo no mesmo estilo -->
+  <div class="project-card">
+    <h3>CaCaOdb: a comprehensive transcriptomic database for cancer-associated cachexia in humans and mice</h3>
+    <p>Curated database with reanalyzed public transcriptomic data from cachectic and normal samples. Including microarray, RNA-seq and scRNA-seq data</p>
+    <div class="tags">
+      <span>GEO2R</span>
+      <span>Seurat</span>
+      <span>DESeq2</span>
+      <span>MySQL</span>
+    </div>
+  </div>
 </section>
+
 
 <section class="expertise">
   <h2>Expertise</h2>
@@ -462,7 +472,7 @@
 </section>
 
 <section class="carousel-section">
-  <h2>📊 Meus Gráficos</h2>
+  <h2>Data visualization</h2>
   <div class="carousel-wrapper">
     <!-- Carrossel à esquerda -->
     <div class="carousel-container">
@@ -478,8 +488,8 @@
 
     <!-- Texto que será alterado dinamicamente -->
     <div class="carousel-text right" id="carousel-text">
-      <h3>Sobre os Gráficos</h3>
-      <p>Esse gráfico mostra uma análise de expressão diferencial entre grupos experimentais.</p>
+      <h3>About this plot</h3>
+      <p>Volcano plot showing the differential expressed genes (DEGs) based on adjusted p-value and log2FoldChange.</p>
     </div>
   </div>
 </section>
@@ -496,7 +506,7 @@
 .carousel-section h2 {
   font-size: 2rem;
   margin-bottom: 30px;
-  color: #f0f921;
+  color: #f7f7f7;
 }
 
 .carousel-wrapper {
@@ -580,20 +590,20 @@
 
   const texts = [
     {
-      title: "Expressão Diferencial",
-      desc: "Esse gráfico mostra uma análise de expressão diferencial entre grupos experimentais usando DESeq2."
+      title: "Differential expression analysis",
+      desc: "Volcano plot showing the differential expressed genes (DEGs) based on adjusted p-value and log2FoldChange."
     },
     {
-      title: "Comparação entre Grupos",
-      desc: "Visualização dos genes com maior variação entre dois grupos usando boxplots e análises estatísticas."
+      title: "Group comparison",
+      desc: "Box plot comparing many groups. Stars show the significative difference between two groups (p-value < 0.05)."
     },
     {
       title: "Heatmap e Clustering",
-      desc: "Gráfico de calor (heatmap) com clustering hierárquico para identificar padrões de expressão."
+      desc: "Positive and negative biomarkers between two groups."
     },
     {
-      title: "Análise ScRNA-seq",
-      desc: "Visualização de dados de RNA de célula única (ScRNA-seq) com UMAP e agrupamento celular usando Seurat."
+      title: "SnRNA-seq analysis",
+      desc: "UMAP and cell type annotation in a muscle snRNA-seq dataseq"
     }
   ];
 
