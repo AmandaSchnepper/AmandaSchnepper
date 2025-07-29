@@ -12,28 +12,19 @@
     font-family: Arial, sans-serif;
   }
 
-   body {
-    background-image: url('fundo.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-    margin: 0;
-  }
-
-   /* timeline */
-  .timeline {
+ .timeline {
     max-width: 700px;
     margin: 40px auto;
     color: #fff;
     font-family: Arial, sans-serif;
-    text-align: center
+    /* REMOVER text-align aqui */
   }
   
   .timeline h2 {
     font-size: 1.8rem;
     margin-bottom: 20px;
     color: #f7f7f7;
+    text-align: center; /* APLICA centralização só no título */
   }
   
   .timeline-container {
@@ -43,34 +34,33 @@
   }
   
   .timeline-item {
-  display: flex;
-  gap: 20px; /* aumenta o espaço entre a linha e o conteúdo */
-  padding: 12px 0;
-  position: relative;
-  padding-left: 30px; /* espaço para a linha (pseudo-elemento) */
-}
+    display: flex;
+    gap: 20px; /* aumenta o espaço entre a linha e o conteúdo */
+    padding: 12px 0;
+    position: relative;
+    padding-left: 30px; /* espaço para a linha (pseudo-elemento) */
+  }
 
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 4px;
-  background: linear-gradient(to bottom, #FF9B54, #FF7F51, #CE4257, #720026, #4F000B); /* degradê com vírgulas corrigido */
-  border-radius: 2px;
-}
-
-.timeline-date {
-  flex-shrink: 0;
-  width: 120px;         /* mais largura para afastar bem da linha */
-  font-size: 0.85rem;
-  font-weight: bold;
-  color: #f7f7f7;
-  padding-top: 4px;
-  padding-left: 10px;   /* afasta da linha vertical */
-}
-
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, #FF9B54, #FF7F51, #CE4257, #720026, #4F000B); /* degradê com vírgulas corrigido */
+    border-radius: 2px;
+  }
+  
+  .timeline-date {
+    flex-shrink: 0;
+    width: 120px;         /* mais largura para afastar bem da linha */
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #f7f7f7;
+    padding-top: 4px;
+    padding-left: 10px;   /* afasta da linha vertical */
+  }
   
   .timeline-content {
     font-size: 0.85rem;
@@ -357,7 +347,7 @@
   font-family: Arial, sans-serif;
 ">
   <h1 style="font-size: 3rem; margin-bottom: 10px; text-shadow: 2px 2px 6px rgba(0,0,0,0.7);">
-    Olá! Eu sou Amanda Schnepper 👋
+    Amanda Piveta Schnepper
   </h1>
   <p style="font-size: 1.3rem; max-width: 700px; margin: 0 auto; text-shadow: 1px 1px 4px rgba(0,0,0,0.6);">
     Under construction
@@ -412,7 +402,7 @@
       <p>Python</p>
     </div>
     <div class="skill-item">
-      <img src="https://raw.githubusercontent.com/nextflow-io/nextflow/master/docs/images/nextflow-logo.png" alt="Nextflow">
+      <img src="https://github.com/nextflow-io/trademark/blob/master/nextflow-logo-bg-light.png?raw=true" alt="Nextflow">
       <p>Nextflow</p>
     </div>
   </div>
